@@ -135,7 +135,6 @@ class model_invoice extends CI_Model{
         $this->db->limit(3);
         $query = $this->db->get();
         return $query->result();
-        
     }
 
     // public function chart_bulan()
