@@ -1,6 +1,6 @@
 <?php 
 
-class auth extends CI_Controller {
+class Auths extends CI_Controller {
 
     public function login()
     {
@@ -15,9 +15,9 @@ class auth extends CI_Controller {
             $this->load->view('templates/footer');
             
         }else{
-            $auth = $this->Model_auths->cek_login();
+            $Auths = $this->Model_auths->cek_login();
 
-            if($auth == FALSE)
+            if($Auths == FALSE)
             {
                 $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>Username atau password anda salah
@@ -25,13 +25,13 @@ class auth extends CI_Controller {
                 <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
-                redirect('auth/login');
+                redirect('Auths/login');
             }else{
-                $this->session->set_userdata('username',$auth->username);
-                $this->session->set_userdata('role_id',$auth->role_id);
+                $this->session->set_userdata('username',$Auths->username);
+                $this->session->set_userdata('role_id',$Auths->role_id);
 
-                switch($auth->role_id){
-                    case 1 : redirect('admin/dashboard_admin');
+                switch($Auths->role_id){
+                    case 1 : redirect('admin/Dashboard_admins');
                     break;
                     case 2 : redirect('welcome');
                     break;
@@ -43,6 +43,6 @@ class auth extends CI_Controller {
 
     public function logout(){
         $this->session->sess_destroy();
-        redirect('auth/login');
+        redirect('Auths/login');
     }
 }

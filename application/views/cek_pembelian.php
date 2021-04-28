@@ -2,16 +2,16 @@
 
 <h1>Cek Status Pembelian</h1>
 <hr>
-            <b>Masukan Kode Invoice</b>
+            <b>Masukan Kode Invoices</b>
             <br>
-            <input id="kd-invoice" type="text" name="invoice">
-            <button type="button" class="btn btn-primary btn-sm cari-invoice">Cari</button>
+            <input id="kd-Invoices" type="text" name="Invoices">
+            <button type="button" class="btn btn-primary btn-sm cari-Invoices">Cari</button>
             <br>
             <br>
             <br>
 
-<div id="isi-invoice">
-<!-- <h4>Detail Pesanan <div class="btn btn-sm btn-success">No. Invoice: 1</div></h4>
+<div id="isi-Invoices">
+<!-- <h4>Detail Pesanan <div class="btn btn-sm btn-success">No. Invoices: 1</div></h4>
 
 <table class="table table-bordered table-hover table-striped">
 

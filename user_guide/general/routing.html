@@ -533,14 +533,14 @@ call the “shirts” controller class and the “id_123” method.</p>
 For example, if a user accesses a password protected area of your web
 application and you wish to be able to redirect them back to the same
 page after they log in, you may find this example useful:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;login/(.+)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;auth/login/$1&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;login/(.+)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Auths/login/$1&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In the above example, if the <code class="docutils literal"><span class="pre">$1</span></code> placeholder contains a
 slash, it will still be split into multiple parameters when
-passed to <code class="docutils literal"><span class="pre">Auth::login()</span></code>.</p>
+passed to <code class="docutils literal"><span class="pre">Auths::login()</span></code>.</p>
 </div>
 <p>For those of you who don’t know regular expressions and want to learn
 more about them, <a class="reference external" href="http://www.regular-expressions.info/">regular-expressions.info</a>

@@ -3414,7 +3414,7 @@ chart-line:
       - activity
       - analytics
       - chart
-      - dashboard
+      - Dashboards
       - gain
       - graph
       - increase
@@ -4384,7 +4384,7 @@ columns:
   search:
     terms:
       - browser
-      - dashboard
+      - Dashboards
       - organize
       - panes
       - split
@@ -7020,7 +7020,7 @@ file-alt:
     terms:
       - document
       - file-text
-      - invoice
+      - Invoices
       - new
       - page
       - pdf
@@ -7197,11 +7197,11 @@ file-import:
     - solid
   unicode: f56f
   voted: true
-file-invoice:
+file-Invoices:
   changes:
     - 5.1.0
     - 5.10.2
-  label: File Invoice
+  label: File Invoices
   search:
     terms:
       - account
@@ -7214,11 +7214,11 @@ file-invoice:
     - solid
   unicode: f570
   voted: true
-file-invoice-dollar:
+file-Invoices-dollar:
   changes:
     - 5.1.0
     - 5.10.2
-  label: File Invoice with US Dollar
+  label: File Invoices with US Dollar
   search:
     terms:
       - $
@@ -15284,7 +15284,7 @@ receipt:
   search:
     terms:
       - check
-      - invoice
+      - Invoices
       - money
       - pay
       - table
@@ -18506,7 +18506,7 @@ tachometer-alt:
   label: Alternate Tachometer
   search:
     terms:
-      - dashboard
+      - Dashboards
       - fast
       - odometer
       - speed

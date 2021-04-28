@@ -33,7 +33,7 @@ $(".item-remove").click(function(event) {
             if(quantity != '' && quantity > 0)
             {
                 $.ajax({
-                    url:"<?php echo base_url();?>dashboard/add",
+                    url:"<?php echo base_url();?>Dashboards/add",
                     method:"POST",
                     data:{product_id:product_id, product_name:product_name,
                           product_price:product_price, quantity:quantity},
@@ -51,7 +51,7 @@ $(".item-remove").click(function(event) {
             }
         });
 
-        $('#items').load("<?php echo base_url();?>dashboard/load");
+        $('#items').load("<?php echo base_url();?>Dashboards/load");
 
       
 
@@ -60,7 +60,7 @@ $(".item-remove").click(function(event) {
             if(confirm("Delete barang ini?"))
             {
              $.ajax({
-                 url:"<?php echo base_url();?>dashboard/remove",
+                 url:"<?php echo base_url();?>Dashboards/remove",
                  method:"POST",
                  data:{row_id:row_id},
                  success:function(data)
@@ -80,7 +80,7 @@ $(".item-remove").click(function(event) {
 
     $("body").on('DOMSubtreeModified', "#items", function() {
         $.ajax({
-                 url:"<?php echo base_url();?>dashboard/totalcart",
+                 url:"<?php echo base_url();?>Dashboards/totalcart",
                  method:"POST",
                  data:{},
                  success:function(data)
@@ -98,7 +98,7 @@ $(".item-remove").click(function(event) {
             if(quantity != '' && quantity > 0)
             {
                 $.ajax({
-                    url:"<?php echo base_url();?>dashboard/add",
+                    url:"<?php echo base_url();?>Dashboards/add",
                     method:"POST",
                     data:{product_id:product_id, product_name:product_name,
                           product_price:product_price, quantity:quantity},
@@ -120,15 +120,15 @@ $(".item-remove").click(function(event) {
 
 
 
-    $('.cari-invoice').click(function(){
-        var invoice = $('#kd-invoice').val();
+    $('.cari-Invoices').click(function(){
+        var Invoices = $('#kd-Invoices').val();
         $.ajax({
-            url:"<?php echo base_url();?>dashboard/cari_invoice",
+            url:"<?php echo base_url();?>Dashboards/cari_invoice",
             method:"POST",
-            data:{invoice:invoice},
+            data:{Invoices:Invoices},
             success:function(data)
             {
-                $('#isi-invoice').html(data);
+                $('#isi-Invoices').html(data);
             }
         });
     });

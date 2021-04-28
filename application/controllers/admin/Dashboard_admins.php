@@ -1,6 +1,6 @@
 <?php
 
-class dashboard_admin extends CI_Controller{
+class Dashboard_admins extends CI_Controller{
 
     public function __construct(){
         parent::__construct();
@@ -11,7 +11,7 @@ class dashboard_admin extends CI_Controller{
             <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-            redirect('auth/login');
+            redirect('Auths/login');
         }
 
         
@@ -38,7 +38,7 @@ class dashboard_admin extends CI_Controller{
         }
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('admin/dashboard',$data);
+        $this->load->view('admin/Dashboards',$data);
         $this->load->view('templates_admin/footer');
     }
 }

@@ -3,7 +3,7 @@
 
     <?php foreach($barang as $brg): ?>
 
-        <form method="post" action="<?php echo base_url().'admin/data_barang/update';?>">
+        <form method="post" action="<?php echo base_url().'admin/Data_barangs/update';?>">
 
         <div class="form-group">
         <label>Nama Barang</label>
@@ -17,8 +17,8 @@
         </div>
 
         <div class="form-group">
-        <label>Kategori</label>
-        <input type="text" name="kategori" class="form-control" value="<?php echo $brg->kategori?>">
+        <label>Kategoris</label>
+        <input type="text" name="Kategoris" class="form-control" value="<?php echo $brg->Kategoris?>">
         </div>
 
         <div class="form-group">

@@ -2210,7 +2210,7 @@ class CI_Email {
 			return FALSE;
 		}
 
-		$this->_send_data('AUTH LOGIN');
+		$this->_send_data('Auths LOGIN');
 
 		$reply = $this->_get_smtp_data();
 
