@@ -4,7 +4,7 @@ class dashboard extends CI_Controller{
 
     public function tambah_ke_keranjang($id)
     {
-        $barang = $this->Model_barang->find($id);
+        $barang = $this->Model_barangs->find($id);
 
         $data = array(
             'id'      => $barang->id_brg,
@@ -69,7 +69,7 @@ class dashboard extends CI_Controller{
 
     public function detail($id_brg)
     {
-        $data['brg'] = $this->Model_barang->detail_brg($id_brg);
+        $data['brg'] = $this->Model_barangs->detail_brg($id_brg);
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('detail_barang',$data);
@@ -95,7 +95,7 @@ class dashboard extends CI_Controller{
     $count = 0;
     foreach($this->cart->contents() as $items)
     {
-        $gambar = $this->Model_barang->cari_gambar($items["id"]);
+        $gambar = $this->Model_barangs->cari_gambar($items["id"]);
         $count++;
         $output .='
         <div class="row">
@@ -149,7 +149,7 @@ class dashboard extends CI_Controller{
     {
         $searchinput = $this->input->post('searchinput');
 
-        $data['barang'] = $this->Model_barang->search_barang($searchinput);
+        $data['barang'] = $this->Model_barangs->search_barang($searchinput);
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
