@@ -41,7 +41,7 @@ class dashboard extends CI_Controller{
 
     public function proses_psn()
     {
-        $is_processed = $this->Model_invoice->index();
+        $is_processed = $this->Model_invoices->index();
         if($is_processed){
             $this->cart->destroy();
             redirect('dashboard/proses_pesanan/'.$is_processed);
@@ -53,9 +53,9 @@ class dashboard extends CI_Controller{
 
     public function proses_pesanan($is_processed)
     {
-        $data['invoice'] = $this->Model_invoice->ambil_id_invoice($is_processed);
+        $data['invoice'] = $this->Model_invoices->ambil_id_invoice($is_processed);
 
-        $data['pesanan'] = $this->Model_invoice->ambil_id_pesanan($is_processed);
+        $data['pesanan'] = $this->Model_invoices->ambil_id_pesanan($is_processed);
         if($is_processed){
             $this->cart->destroy();
             $this->load->view('templates/header');
@@ -168,8 +168,8 @@ class dashboard extends CI_Controller{
     public function cari_invoice()
     {
         $id_invoice = $_POST["invoice"];
-        $cek_invoice = $this->Model_invoice->check_invoice($id_invoice);
-        $datainvoice = $this->Model_invoice->ambil_id_invoice($id_invoice);
+        $cek_invoice = $this->Model_invoices->check_invoice($id_invoice);
+        $datainvoice = $this->Model_invoices->ambil_id_invoice($id_invoice);
         if($datainvoice){
         $status = $datainvoice->status;
         $nama = $datainvoice->nama;
@@ -177,7 +177,7 @@ class dashboard extends CI_Controller{
         $output_invoice = ' ';
         if($cek_invoice == true)
         {
-            $datapsn = $this->Model_invoice->get_pesan($id_invoice);
+            $datapsn = $this->Model_invoices->get_pesan($id_invoice);
             $output_invoice .= '
             <h4>Detail Pembelian <div class="btn btn-sm btn-success">No. Invoice: '.$id_invoice.'</div></h4>
             <br>

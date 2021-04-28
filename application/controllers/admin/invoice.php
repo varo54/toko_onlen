@@ -18,7 +18,7 @@
 
      public function index()
      {
-         $data['invoice'] = $this->Model_invoice->tampil_data();
+         $data['invoice'] = $this->Model_invoices->tampil_data();
          $this->load->view('templates_admin/header');
          $this->load->view('templates_admin/sidebar');
          $this->load->view('admin/invoice',$data);
@@ -27,9 +27,9 @@
 
      public function detail($id_invoice)
      {
-        $data['invoice'] = $this->Model_invoice->ambil_id_invoice($id_invoice);
+        $data['invoice'] = $this->Model_invoices->ambil_id_invoice($id_invoice);
 
-        $data['pesanan'] = $this->Model_invoice->ambil_id_pesanan($id_invoice);
+        $data['pesanan'] = $this->Model_invoices->ambil_id_pesanan($id_invoice);
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/detail_invoice',$data);
@@ -43,7 +43,7 @@
             $data = array(
                 'status' => 'Sedang diproses'
             );
-            $this->Model_invoice->get_status($data,$id_invoice);
+            $this->Model_invoices->get_status($data,$id_invoice);
             redirect('admin/invoice/detail/'.$id_invoice, 'refresh');
         }
 
@@ -52,7 +52,7 @@
             $data = array(
                 'status' => 'Sedang dikirim'
             );
-            $this->Model_invoice->get_status($data,$id_invoice);
+            $this->Model_invoices->get_status($data,$id_invoice);
             redirect('admin/invoice/detail/'.$id_invoice, 'refresh');
         }
 
@@ -61,7 +61,7 @@
             $data = array(
                 'status' => 'Telah sampai'
             );
-            $this->Model_invoice->get_status($data,$id_invoice);
+            $this->Model_invoices->get_status($data,$id_invoice);
             redirect('admin/invoice/detail/'.$id_invoice, 'refresh');
         }
 

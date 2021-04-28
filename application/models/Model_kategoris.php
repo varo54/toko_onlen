@@ -1,6 +1,6 @@
 <?php
 
-class Model_kategori extends CI_Model{
+class Model_kategoris extends CI_Model{
 
     public function data_elektronik()
     {
