@@ -21,8 +21,8 @@
                 </tr>
 
                 <tr>
-                <td>Kategoris</td>
-                <td><strong><?php echo $brg->Kategoris?></strong></td>
+                <td>Kategori</td>
+                <td><strong><?php echo $brg->kategori?></strong></td>
                 </tr>
 
                 <tr>

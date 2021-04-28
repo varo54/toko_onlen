@@ -1,5 +1,5 @@
 <?php 
- class Invoices extends CI_Controller{
+ class invoice extends CI_Controller{
 
     public function __construct(){
         parent::__construct();
@@ -10,7 +10,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-            redirect('Auths/login');
+            redirect('auth/login');
         }
 
        
@@ -18,16 +18,16 @@
 
      public function index()
      {
-         $data['Invoices'] = $this->Model_invoices->tampil_data();
+         $data['invoice'] = $this->Model_invoices->tampil_data();
          $this->load->view('templates_admin/header');
          $this->load->view('templates_admin/sidebar');
-         $this->load->view('admin/Invoices',$data);
+         $this->load->view('admin/invoice',$data);
          $this->load->view('templates_admin/footer');
      }
 
      public function detail($id_invoice)
      {
-        $data['Invoices'] = $this->Model_invoices->ambil_id_invoice($id_invoice);
+        $data['invoice'] = $this->Model_invoices->ambil_id_invoice($id_invoice);
 
         $data['pesanan'] = $this->Model_invoices->ambil_id_pesanan($id_invoice);
         $this->load->view('templates_admin/header');
@@ -44,7 +44,7 @@
                 'status' => 'Sedang diproses'
             );
             $this->Model_invoices->get_status($data,$id_invoice);
-            redirect('admin/Invoices/detail/'.$id_invoice, 'refresh');
+            redirect('admin/invoice/detail/'.$id_invoice, 'refresh');
         }
 
         else if($kondisi == 'kirim')
@@ -53,7 +53,7 @@
                 'status' => 'Sedang dikirim'
             );
             $this->Model_invoices->get_status($data,$id_invoice);
-            redirect('admin/Invoices/detail/'.$id_invoice, 'refresh');
+            redirect('admin/invoice/detail/'.$id_invoice, 'refresh');
         }
 
         else if($kondisi == 'sampai')
@@ -62,7 +62,7 @@
                 'status' => 'Telah sampai'
             );
             $this->Model_invoices->get_status($data,$id_invoice);
-            redirect('admin/Invoices/detail/'.$id_invoice, 'refresh');
+            redirect('admin/invoice/detail/'.$id_invoice, 'refresh');
         }
 
         else{

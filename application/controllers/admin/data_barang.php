@@ -1,6 +1,6 @@
 <?php
 
-class Data_barangs extends CI_Controller{
+class data_barang extends CI_Controller{
 
     public function __construct(){
         parent::__construct();
@@ -11,7 +11,7 @@ class Data_barangs extends CI_Controller{
             <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-            redirect('Auths/login');
+            redirect('auth/login');
         }
 
        
@@ -22,7 +22,7 @@ class Data_barangs extends CI_Controller{
         $data['barang'] = $this->Model_barangs->tampil_data()->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('admin/Data_barangs',$data);
+        $this->load->view('admin/data_barang',$data);
         $this->load->view('templates_admin/footer');
     }
 
@@ -30,7 +30,7 @@ class Data_barangs extends CI_Controller{
     {
         $nama_brg   = $this->input->post('nama_brg');
         $keterangan = $this->input->post('keterangan');
-        $Kategoris   = $this->input->post('Kategoris');
+        $kategori   = $this->input->post('kategori');
         $harga      = $this->input->post('harga');
         $stok       = $this->input->post('stok');
         $gambar     = $FILES['gambar']['name'];
@@ -48,14 +48,14 @@ class Data_barangs extends CI_Controller{
         $data = array(
             'nama_brg'   => $nama_brg,
             'keterangan' => $keterangan,
-            'Kategoris' => $Kategoris,
+            'kategori' => $kategori,
             'harga' => $harga,
             'stok' => $stok,
             'gambar' => $gambar,
         );
 
         $this->Model_barangs->tambah_barang($data, 'tb_barang');
-        redirect('admin/Data_barangs/index');
+        redirect('admin/data_barang/index');
     }
 
     public function edit($id)
@@ -73,7 +73,7 @@ class Data_barangs extends CI_Controller{
         $id = $this->input->post('id_brg');
         $nama_brg = $this->input->post('nama_brg');
         $keterangan = $this->input->post('keterangan');
-        $Kategoris = $this->input->post('Kategoris');
+        $kategori = $this->input->post('kategori');
         $harga = $this->input->post('harga');
         $stok = $this->input->post('stok');
 
@@ -81,7 +81,7 @@ class Data_barangs extends CI_Controller{
 
             'nama_brg' => $nama_brg,
             'keterangan' => $keterangan,
-            'Kategoris' => $Kategoris,
+            'kategori' => $kategori,
             'harga' => $harga,
             'stok' => $stok
         );
@@ -91,14 +91,14 @@ class Data_barangs extends CI_Controller{
         );
 
         $this->Model_barangs->update_data($where,$data,'tb_barang');
-        redirect('admin/Data_barangs/index');
+        redirect('admin/data_barang/index');
     }
 
     public function hapus ($id){
 
         $where = array('id_brg' => $id);
         $this->Model_barangs->hapus_data($where, 'tb_barang');
-        redirect('admin/Data_barangs/index');
+        redirect('admin/data_barang/index');
     }
 }
 

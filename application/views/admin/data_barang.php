@@ -7,7 +7,7 @@
     <th>No</th>
     <th>NAMA BARANG</th>
     <th>KETERANGAN</th>
-    <th>Kategoris</th>
+    <th>KATEGORI</th>
     <th>HARGA</th>
     <th>STOK</th>
     <th colspan="3">AKSI</th>
@@ -21,12 +21,12 @@ foreach($barang as $brg): ?>
     <td><?php echo $no++ ?></td>
     <td><?php echo $brg->nama_brg ?></td>
     <td><?php echo $brg->keterangan ?></td>
-    <td><?php echo $brg->Kategoris ?></td>
+    <td><?php echo $brg->kategori ?></td>
     <td><?php echo $brg->harga ?></td>
     <td><?php echo $brg->stok ?></td>
-    <td><?php echo anchor('Dashboards/detail/'.$brg->id_brg,'<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>');?></td>
-    <td><?php echo anchor('admin/Data_barangs/edit/'.$brg->id_brg,'<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>');?></td>
-    <td><?php echo anchor('admin/Data_barangs/hapus/'.$brg->id_brg,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>');?></td>
+    <td><?php echo anchor('dashboard/detail/'.$brg->id_brg,'<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>');?></td>
+    <td><?php echo anchor('admin/data_barang/edit/'.$brg->id_brg,'<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>');?></td>
+    <td><?php echo anchor('admin/data_barang/hapus/'.$brg->id_brg,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>');?></td>
 </tr>
 
 <?php endforeach; ?>
@@ -48,7 +48,7 @@ foreach($barang as $brg): ?>
         </button>
       </div>
       <div class="modal-body">
-        <form action="<?php echo base_url().'admin/Data_barangs/tambah_aksi'?>" method="post"
+        <form action="<?php echo base_url().'admin/data_barang/tambah_aksi'?>" method="post"
         enctype="multipart/form-data">
     
         <div class="form-group">
@@ -62,8 +62,8 @@ foreach($barang as $brg): ?>
         </div>
 
         <div class="form-group">
-            <label>Kategoris</label>
-            <select class="form-control" name="Kategoris">
+            <label>Kategori</label>
+            <select class="form-control" name="kategori">
               <option>Elektronik</option>
               <option>Pakaian Pria</option>
               <option>Pakaian Wanita</option>

@@ -137,7 +137,7 @@ class CI_Cache_redis extends CI_Driver
 				log_message('error', 'Cache: Redis connection failed. Check your configuration.');
 			}
 
-			if (isset($config['password']) && ! $this->_redis->Auths($config['password']))
+			if (isset($config['password']) && ! $this->_redis->auth($config['password']))
 			{
 				log_message('error', 'Cache: Redis authentication failed.');
 			}

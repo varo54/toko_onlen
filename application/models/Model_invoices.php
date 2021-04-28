@@ -8,14 +8,14 @@ class Model_invoices extends CI_Model{
         $nama = $this->input->post('nama');
         $alamat = $this->input->post('alamat');
         
-        $Invoices = array(
+        $invoice = array(
             'nama' => $nama,
             'alamat' => $alamat,
             'tgl_pesan' => date('Y-m-d H:i:s'),
             'batas_bayar' => date('Y-m-d H:i:s',mktime(date('H'),
              date('i'),date('s'),date('m'),date('d') + 1,date('Y'))),
         );
-        $this->db->insert('tb_invoice', $Invoices);
+        $this->db->insert('tb_invoice', $invoice);
         $id_invoice = $this->db->insert_id();
 
         foreach($this->cart->contents() as $item){

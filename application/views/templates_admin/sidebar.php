@@ -7,7 +7,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin/Dashboard_admins');?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin/dashboard_admin');?>">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-store"></i>
                 </div>
@@ -17,23 +17,23 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboards -->
+            <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('admin/Dashboard_admins');?>">
+                <a class="nav-link" href="<?php echo base_url('admin/dashboard_admin');?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboards</span></a>
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/Data_barangs');?>">
+                <a class="nav-link" href="<?php echo base_url('admin/data_barang');?>">
                     <i class="fas fa-fw fa-database"></i>
                     <span>Data Barang</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/Invoices');?>">
-                    <i class="fas fa-fw fa-file-Invoices"></i>
+                <a class="nav-link" href="<?php echo base_url('admin/invoice');?>">
+                    <i class="fas fa-fw fa-file-invoice"></i>
                     <span>Invoices</span></a>
             </li>
 
@@ -117,9 +117,9 @@
                         
                         <?php if($this->session->userdata('username')) {?>
                             <li><div>Selamat datang <?php echo $this->session->userdata('username')  ?></div></li>
-                            <li class="ml-2"><?php echo anchor('Auths/logout', 'Logout')?></li>
+                            <li class="ml-2"><?php echo anchor('auth/logout', 'Logout')?></li>
                             <?php } else { ?>
-                            <li><?php echo anchor('Auths/login', 'Login'); ?></li>
+                            <li><?php echo anchor('auth/login', 'Login'); ?></li>
                             <?php } ?>
                         </ul>
 
