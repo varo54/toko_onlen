@@ -19,7 +19,7 @@ class data_barang extends CI_Controller{
 
     public function index()
     {
-        $data['barang'] = $this->model_barang->tampil_data()->result();
+        $data['barang'] = $this->Model_barang->tampil_data()->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/data_barang',$data);
@@ -54,14 +54,14 @@ class data_barang extends CI_Controller{
             'gambar' => $gambar,
         );
 
-        $this->model_barang->tambah_barang($data, 'tb_barang');
+        $this->Model_barang->tambah_barang($data, 'tb_barang');
         redirect('admin/data_barang/index');
     }
 
     public function edit($id)
     {
         $where = array('id_brg' => $id);
-        $data['barang'] = $this->model_barang->edit_barang($where,'tb_barang')->result();
+        $data['barang'] = $this->Model_barang->edit_barang($where,'tb_barang')->result();
 
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
@@ -90,14 +90,14 @@ class data_barang extends CI_Controller{
             'id_brg' => $id
         );
 
-        $this->model_barang->update_data($where,$data,'tb_barang');
+        $this->Model_barang->update_data($where,$data,'tb_barang');
         redirect('admin/data_barang/index');
     }
 
     public function hapus ($id){
 
         $where = array('id_brg' => $id);
-        $this->model_barang->hapus_data($where, 'tb_barang');
+        $this->Model_barang->hapus_data($where, 'tb_barang');
         redirect('admin/data_barang/index');
     }
 }

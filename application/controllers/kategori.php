@@ -49,4 +49,5 @@ class kategori extends CI_Controller{
         $this->load->view('peralatan_olahraga',$data);
         $this->load->view('templates/footer');
     }
+    
 }
