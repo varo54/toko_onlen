@@ -37,31 +37,31 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/elektronik');?>">
+                <a class="nav-link" href="<?php echo base_url('Kategoris/elektronik');?>">
                     <i class="fas fa-fw fa-tv"></i>
                     <span>Elektronik</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/pakaian_pria');?>">
+                <a class="nav-link" href="<?php echo base_url('Kategoris/pakaian_pria');?>">
                     <i class="fas fa-fw fa-tshirt"></i>
                     <span>Pakaian Pria</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/pakaian_wanita');?>">
+                <a class="nav-link" href="<?php echo base_url('Kategoris/pakaian_wanita');?>">
                     <i class="fas fa-fw fa-tshirt"></i>
                     <span>Pakaian Wanita</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/pakaian_anak_anak');?>">
+                <a class="nav-link" href="<?php echo base_url('Kategoris/pakaian_anak_anak');?>">
                     <i class="fas fa-fw fa-tshirt"></i>
                     <span>Pakian Anak</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/peralatan_olahraga');?>">
+                <a class="nav-link" href="<?php echo base_url('Kategoris/peralatan_olahraga');?>">
                     <i class="fas fa-fw fa-futbol"></i>
                     <span>Peralatan Olahraga</span></a>
             </li>

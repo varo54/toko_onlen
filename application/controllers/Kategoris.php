@@ -1,6 +1,6 @@
 <?php
 
-class kategori extends CI_Controller{
+class Kategoris extends CI_Controller{
 
     public function elektronik()
     {
