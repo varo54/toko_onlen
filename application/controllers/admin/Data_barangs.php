@@ -1,6 +1,6 @@
 <?php
 
-class data_barang extends CI_Controller{
+class Data_barangs extends CI_Controller{
 
     public function __construct(){
         parent::__construct();
@@ -11,7 +11,7 @@ class data_barang extends CI_Controller{
             <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-            redirect('auth/login');
+            redirect('Auths/login');
         }
 
        
@@ -22,7 +22,7 @@ class data_barang extends CI_Controller{
         $data['barang'] = $this->Model_barangs->tampil_data()->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('admin/data_barang',$data);
+        $this->load->view('admin/Data_barangs',$data);
         $this->load->view('templates_admin/footer');
     }
 
@@ -55,7 +55,7 @@ class data_barang extends CI_Controller{
         );
 
         $this->Model_barangs->tambah_barang($data, 'tb_barang');
-        redirect('admin/data_barang/index');
+        redirect('admin/Data_barangs/index');
     }
 
     public function edit($id)
@@ -91,14 +91,14 @@ class data_barang extends CI_Controller{
         );
 
         $this->Model_barangs->update_data($where,$data,'tb_barang');
-        redirect('admin/data_barang/index');
+        redirect('admin/Data_barangs/index');
     }
 
     public function hapus ($id){
 
         $where = array('id_brg' => $id);
         $this->Model_barangs->hapus_data($where, 'tb_barang');
-        redirect('admin/data_barang/index');
+        redirect('admin/Data_barangs/index');
     }
 }
 

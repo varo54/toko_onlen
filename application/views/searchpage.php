@@ -40,7 +40,7 @@
     data-productname="<?php echo $brg->nama_brg?>" data-price="<?php echo $brg->harga?>"
     data-productid="<?php echo $brg->id_brg?>" data-totalcart="<?php echo $this->cart->total_items()?>">Add to Cart</button>
     
-    <a href="<?php echo base_url('dashboard/detail/'.$brg->id_brg);?>" class="stretched-link"></a>
+    <a href="<?php echo base_url('Dashboards/detail/'.$brg->id_brg);?>" class="stretched-link"></a>
 
     
   </div>

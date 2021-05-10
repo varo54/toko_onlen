@@ -24,9 +24,9 @@ foreach($barang as $brg): ?>
     <td><?php echo $brg->kategori ?></td>
     <td><?php echo $brg->harga ?></td>
     <td><?php echo $brg->stok ?></td>
-    <td><?php echo anchor('dashboard/detail/'.$brg->id_brg,'<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>');?></td>
-    <td><?php echo anchor('admin/data_barang/edit/'.$brg->id_brg,'<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>');?></td>
-    <td><?php echo anchor('admin/data_barang/hapus/'.$brg->id_brg,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>');?></td>
+    <td><?php echo anchor('Dashboards/detail/'.$brg->id_brg,'<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>');?></td>
+    <td><?php echo anchor('admin/Data_barangs/edit/'.$brg->id_brg,'<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>');?></td>
+    <td><?php echo anchor('admin/Data_barangs/hapus/'.$brg->id_brg,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>');?></td>
 </tr>
 
 <?php endforeach; ?>
@@ -48,7 +48,7 @@ foreach($barang as $brg): ?>
         </button>
       </div>
       <div class="modal-body">
-        <form action="<?php echo base_url().'admin/data_barang/tambah_aksi'?>" method="post"
+        <form action="<?php echo base_url().'admin/Data_barangs/tambah_aksi'?>" method="post"
         enctype="multipart/form-data">
     
         <div class="form-group">

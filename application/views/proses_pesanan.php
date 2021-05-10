@@ -3,7 +3,7 @@
 <h3 class="text-center align-middle">Selamat Pesanan Anda Telah Berhasil Diproses</h3>
 </div>
 <br>
-<h4>Detail Pesanan <div class="btn btn-sm btn-success">No. Invoice: <?php echo $invoice->id?></div></h4>
+<h4>Detail Pesanan <div class="btn btn-sm btn-success">No. Invoice: <?php echo $Invoices->id?></div></h4>
 
 <table class="table table-bordered table-hover table-striped">
 
@@ -33,9 +33,9 @@ foreach($pesanan as $psn):
 </tr>
 </table>
 
-<a href="<?php echo base_url('admin/invoice/index');?>">
+<a href="<?php echo base_url('admin/Invoices/index');?>">
 <div class="btn btn-sm btn-primary">Kembali</div></a>
 
-<h4 class="float-right mr-2"><strong>Status: <?php echo $invoice->status?> </strong></h4>
+<h4 class="float-right mr-2"><strong>Status: <?php echo $Invoices->status?> </strong></h4>
 </div>
 

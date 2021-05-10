@@ -67,7 +67,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('dashboard/cek_pembelian');?>">
+                <a class="nav-link" href="<?php echo base_url('Dashboards/cek_pembelian');?>">
                     <i class="fas fa-fw fa-check"></i>
                     <span>Cek Status Pembelian</span></a>
             </li>
@@ -105,7 +105,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form action="<?php echo base_url('dashboard/search');?>" method="post"
+                    <form action="<?php echo base_url('Dashboards/search');?>" method="post"
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
 
@@ -176,7 +176,7 @@
                                         <div class="row">
                                             <div class="view-cart">
                                                 <span class="close-cart" data-toggle="collapse" data-target="#ViewCart">Close</span>
-                                                <a href="<?php echo base_url();?>dashboard/detail_keranjang">View Cart</a>                                                     
+                                                <a href="<?php echo base_url();?>Dashboards/detail_keranjang">View Cart</a>                                                     
                                             </div>
                                         </div>
                                     </div>
@@ -191,9 +191,9 @@
                         
                         <?php if($this->session->userdata('username')) {?>
                             <li><div>Selamat datang <?php echo $this->session->userdata('username')  ?></div></li>
-                            <li class="ml-2"><?php echo anchor('auth/logout', 'Logout')?></li>
+                            <li class="ml-2"><?php echo anchor('Auths/logout', 'Logout')?></li>
                             <?php } else { ?>
-                            <li><?php echo anchor('auth/login', 'Login'); ?></li>
+                            <li><?php echo anchor('Auths/login', 'Login'); ?></li>
 
                             <?php } ?>
 
