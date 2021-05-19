@@ -21,7 +21,7 @@
          $data['Invoices'] = $this->Model_invoices->tampil_data();
          $this->load->view('templates_admin/header');
          $this->load->view('templates_admin/sidebar');
-         $this->load->view('admin/Invoices',$data);
+         $this->load->view('admin/invoice',$data);
          $this->load->view('templates_admin/footer');
      }
 
