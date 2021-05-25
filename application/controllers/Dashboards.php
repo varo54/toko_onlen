@@ -46,7 +46,7 @@ class Dashboards extends CI_Controller{
             $this->cart->destroy();
             redirect('Dashboards/proses_pesanan/'.$is_processed);
         }else{
-            echo "Maaf,Pesanan Anda Gagal diproses";
+            echo "Maaf,Pesanan Anda Gagal diprosess ".$is_processed;
         }
         
     }
@@ -63,7 +63,7 @@ class Dashboards extends CI_Controller{
             $this->load->view('proses_pesanan',$data);
             $this->load->view('templates/footer');
         }else{
-            echo "Maaf,Pesanan Anda Gagal diproses";
+            echo "Maaf,Pesanan Anda Gagal diproses ".$is_processed;
         }
     }
 
